@@ -20,11 +20,11 @@ namespace File_Filter
             InitializeComponent();
             string ZFCEPath = AppDomain.CurrentDomain.BaseDirectory + "Results\\";
 
-            this.textBox1.Text = @"F:\mysteap\notepad\notepad";
-            this.textBox2.Text = ZFCEPath + "少于6个字";
-            this.textBox3.Text = ZFCEPath + "少于30个字";
-            this.textBox4.Text = ZFCEPath + "特殊符号";
-            this.textBox5.Text = ZFCEPath + "关键字";
+            //this.textBox1.Text = @"F:\mysteap\notepad\notepad";
+            //this.textBox2.Text = ZFCEPath + "少于6个字";
+            //this.textBox3.Text = ZFCEPath + "少于30个字";
+            //this.textBox4.Text = ZFCEPath + "特殊符号";
+            //this.textBox5.Text = ZFCEPath + "关键字";
 
         }
 
