@@ -7,3 +7,12 @@ D:\Dev Project\File_Filter\File_Filter\File_Filter\obj\Debug\File_Filter.Propert
 D:\Dev Project\File_Filter\File_Filter\File_Filter\obj\Debug\File_Filter.csproj.GenerateResource.Cache
 D:\Dev Project\File_Filter\File_Filter\File_Filter\obj\Debug\File_Filter.exe
 D:\Dev Project\File_Filter\File_Filter\File_Filter\obj\Debug\File_Filter.pdb
+F:\mysteap\Devpro\File_Filter\File_Filter\File_Filter\bin\Debug\File_Filter.exe.config
+F:\mysteap\Devpro\File_Filter\File_Filter\File_Filter\obj\Debug\File_Filter.exe
+F:\mysteap\Devpro\File_Filter\File_Filter\File_Filter\obj\Debug\File_Filter.pdb
+F:\mysteap\Devpro\File_Filter\File_Filter\File_Filter\bin\Debug\File_Filter.exe
+F:\mysteap\Devpro\File_Filter\File_Filter\File_Filter\bin\Debug\File_Filter.pdb
+F:\mysteap\Devpro\File_Filter\File_Filter\File_Filter\obj\Debug\File_Filter.csprojResolveAssemblyReference.cache
+F:\mysteap\Devpro\File_Filter\File_Filter\File_Filter\obj\Debug\File_Filter.frmMain.resources
+F:\mysteap\Devpro\File_Filter\File_Filter\File_Filter\obj\Debug\File_Filter.Properties.Resources.resources
+F:\mysteap\Devpro\File_Filter\File_Filter\File_Filter\obj\Debug\File_Filter.csproj.GenerateResource.Cache
