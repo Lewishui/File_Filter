@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(77, 12);
             this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(259, 21);
             this.textBox1.TabIndex = 11;
             this.textBox1.Text = "C:\\";
@@ -101,7 +101,6 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(77, 53);
             this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(259, 21);
             this.textBox2.TabIndex = 16;
             this.textBox2.Text = "C:\\";
@@ -129,7 +128,6 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(77, 91);
             this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(259, 21);
             this.textBox3.TabIndex = 19;
             this.textBox3.Text = "C:\\";
@@ -157,7 +155,6 @@
             // 
             this.textBox4.Location = new System.Drawing.Point(77, 132);
             this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(259, 21);
             this.textBox4.TabIndex = 22;
             this.textBox4.Text = "C:\\";
@@ -185,7 +182,6 @@
             // 
             this.textBox5.Location = new System.Drawing.Point(77, 170);
             this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(259, 21);
             this.textBox5.TabIndex = 25;
             this.textBox5.Text = "C:\\";
@@ -223,6 +219,7 @@
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(446, 23);
             this.progressBar1.TabIndex = 27;
+            this.progressBar1.Visible = false;
             // 
             // frmMain
             // 
@@ -250,6 +247,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "自动工具";

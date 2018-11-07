@@ -15,3 +15,5 @@ F:\mysteap\Devpro\File_Filter\File_Filter\File_Filter\obj\Debug\File_Filter.cspr
 F:\mysteap\Devpro\File_Filter\File_Filter\File_Filter\obj\Debug\File_Filter.frmMain.resources
 F:\mysteap\Devpro\File_Filter\File_Filter\File_Filter\obj\Debug\File_Filter.Properties.Resources.resources
 F:\mysteap\Devpro\File_Filter\File_Filter\File_Filter\obj\Debug\File_Filter.csproj.GenerateResource.Cache
+D:\Dev Project\File_Filter\File_Filter\File_Filter\obj\Debug\File_Filter.csprojResolveAssemblyReference.cache
+D:\Dev Project\File_Filter\File_Filter\File_Filter\obj\Debug\File_Filter.frmMessageShow.resources

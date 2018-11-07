@@ -15,16 +15,26 @@ namespace File_Filter
 {
     public partial class frmMain : Form
     {
+        // 后台执行控件
+        private BackgroundWorker bgWorker;
+        // 消息显示窗体
+        private frmMessageShow frmMessageShow;
+        // 后台操作是否正常完成
+        private bool blnBackGroundWorkIsOK = false;
+        //后加的后台属性显
+        private bool backGroundRunResult;
+        string filepath;
+
         public frmMain()
         {
             InitializeComponent();
             string ZFCEPath = AppDomain.CurrentDomain.BaseDirectory + "Results\\";
 
             //this.textBox1.Text = @"F:\mysteap\notepad\notepad";
-            //this.textBox2.Text = ZFCEPath + "少于6个字";
-            //this.textBox3.Text = ZFCEPath + "少于30个字";
-            //this.textBox4.Text = ZFCEPath + "特殊符号";
-            //this.textBox5.Text = ZFCEPath + "关键字";
+            this.textBox2.Text = ZFCEPath + "少于6个字";
+            this.textBox3.Text = ZFCEPath + "少于30个字";
+            this.textBox4.Text = ZFCEPath + "特殊符号";
+            this.textBox5.Text = ZFCEPath + "关键字";
 
         }
 
@@ -36,18 +46,90 @@ namespace File_Filter
                 this.textBox1.Text = folderBrowserDialog.SelectedPath;
             }
         }
+        private void InitialBackGroundWorker()
+        {
+            bgWorker = new BackgroundWorker();
+            bgWorker.WorkerReportsProgress = true;
+            bgWorker.WorkerSupportsCancellation = true;
+            bgWorker.RunWorkerCompleted +=
+                new RunWorkerCompletedEventHandler(bgWorker_RunWorkerCompleted);
+            bgWorker.ProgressChanged +=
+                new ProgressChangedEventHandler(bgWorker_ProgressChanged);
+        }
 
+        private void bgWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                blnBackGroundWorkIsOK = false;
+            }
+            else if (e.Cancelled)
+            {
+                blnBackGroundWorkIsOK = true;
+            }
+            else
+            {
+                blnBackGroundWorkIsOK = true;
+            }
+        }
+
+        private void bgWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            if (frmMessageShow != null && frmMessageShow.Visible == true)
+            {
+                //设置显示的消息
+                frmMessageShow.setMessage(e.UserState.ToString());
+                //设置显示的按钮文字
+                if (e.ProgressPercentage == clsConstant.Thread_Progress_OK)
+                {
+                    frmMessageShow.setStatus(clsConstant.Dialog_Status_Enable);
+                }
+            }
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             try
             {
-                List<string> Alist = GetBy_CategoryReportFileName(textBox1.Text);
+                filepath = textBox1.Text;
                 this.label6.Text = "";
-                this.progressBar1.Visible = true;
+              //  this.progressBar1.Visible = true;
+
+                InitialBackGroundWorker();
+                bgWorker.DoWork += new DoWorkEventHandler(ReadclaimreportfromServer);
+
+                bgWorker.RunWorkerAsync();
+
+                // 启动消息显示画面
+                frmMessageShow = new frmMessageShow(clsShowMessage.MSG_001,
+                                                    clsShowMessage.MSG_007,
+                                                    clsConstant.Dialog_Status_Disable);
+                frmMessageShow.ShowDialog();
+
+                // 数据读取成功后在画面显示
+                if (blnBackGroundWorkIsOK)
+                {
+                    this.label6.Text = "运行结束";
+                    //MessageBox.Show("运行结束 ！");
+                   // this.progressBar1.Visible = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                return;
+                throw ex;
+            }      
+
+        }
+
+        private void NewMethod()
+        {
+            try
+            {
+                List<string> Alist = GetBy_CategoryReportFileName(filepath);
+         
                 checkdata(Alist);
-                this.label6.Text = "运行结束";
-                MessageBox.Show("运行结束 ！");
-                this.progressBar1.Visible = false;
+               
+            
             }
             catch (Exception ex)
             {
@@ -56,22 +138,35 @@ namespace File_Filter
 
                 throw;
             }
+        }
+        private void ReadclaimreportfromServer(object sender, DoWorkEventArgs e)
+        {       
+            //导入程序集
+            DateTime oldDate = DateTime.Now;
+
+            NewMethod();
+            DateTime FinishTime = DateTime.Now;
+            TimeSpan s = DateTime.Now - oldDate;
+            string timei = s.Minutes.ToString() + ":" + s.Seconds.ToString();
+            string Showtime = clsShowMessage.MSG_029 + timei.ToString();
+            bgWorker.ReportProgress(clsConstant.Thread_Progress_OK, clsShowMessage.MSG_009 + "\r\n" + Showtime);
+
 
         }
-
         private void checkdata(List<string> Alist)
         {
-            this.progressBar1.Maximum = Alist.Count;
+            //this.progressBar1.Maximum = Alist.Count;
 
 
             for (int i = 0; i < Alist.Count; i++)
             {
                 bool iscontuine = false;
-                this.progressBar1.Value = i;
+              //  this.progressBar1.Value = i;
                 string Savename = Alist[i];
                 string name = System.IO.Path.GetFileNameWithoutExtension(Alist[i]);
 
-                this.label6.Text = name + "    " + i + "/" + Alist.Count;
+                //this.label6.Text = name + "    " + i + "/" + Alist.Count;
+                bgWorker.ReportProgress(0, name + "    " + i + "/" + Alist.Count);
 
                 bool ischina = HasChineseTest(name);
                 int isABC = Regex.Matches(name, "[a-zA-Z]").Count;
@@ -85,7 +180,7 @@ namespace File_Filter
                 //例如：！！、~~~等；
                 //包含过多重复文字;
                 //纯数字、纯外文；
-                string xt = "ˉ ˇ ¨ ‘’ 々 ～ ‖ ∶ ” ’ ‘ ｜ 〃 〔 〕 《 》 「 」 『 』 ． 〖 〗 【 【 】 （ ） 〔 〕 ｛ ｝ ≈ ≡ ≠ ＝ ≤ ≥ ＜ ＞ ≮ ≯ ∷ ± ＋ － × ÷ ／ ∫ ∮ ∝ ∞ ∧ ∨ ∑ ∏ ∪ ∩ ∈ ∵ ∴ ⊥ ‖ ∠ ⌒ ⊙ ≌ ∽ √ ° ′ 〃 ＄ ￡ ￥ ‰ ％ ℃ ¤ ￠ § № ☆ ★ ○ ● ◎ ◇ ◆ □ ■ △ ▲ ※ → ← ↑ ↓ 〓 ＃ ＆ ＠ ＼ ＾ ＿ ";
+                string xt = ". ˉ ˇ ¨ ‘’ 々 ～ ‖ ∶ ” ’ ‘ ｜ 〃 〔 〕 《 》 「 」 『 』 ． 〖 〗 【 【 】 （ ） 〔 〕 ｛ ｝ ≈ ≡ ≠ ＝ ≤ ≥ ＜ ＞ ≮ ≯ ∷ ± ＋ － × ÷ ／ ∫ ∮ ∝ ∞ ∧ ∨ ∑ ∏ ∪ ∩ ∈ ∵ ∴ ⊥ ‖ ∠ ⌒ ⊙ ≌ ∽ √ ° ′ 〃 ＄ ￡ ￥ ‰ ％ ℃ ¤ ￠ § № ☆ ★ ○ ● ◎ ◇ ◆ □ ■ △ ▲ ※ → ← ↑ ↓ 〓 ＃ ＆ ＠ ＼ ＾ ＿ ";
                 //string[] astr = xt.ToArray();
                 string[] temp3 = System.Text.RegularExpressions.Regex.Split(xt, " ");
                 iscontuine = false;
@@ -100,6 +195,8 @@ namespace File_Filter
                         {
                             iscontuine = true;
                             File.Copy(textBox1.Text + "\\" + Savename, textBox4.Text + "\\" + Savename, true);
+                            File.Delete(textBox1.Text + "\\" + Savename);
+
                             break;
                         }
                     }
@@ -157,6 +254,7 @@ namespace File_Filter
                     if (name.Contains(temp1[j]) && temp1[j] != "")
                     {
                         File.Copy(textBox1.Text + "\\" + Savename, textBox5.Text + "\\" + Savename, true);
+                        File.Delete(textBox1.Text + "\\" + Savename);
                         iscontuine = true;
                         break;
                     }
@@ -177,16 +275,19 @@ namespace File_Filter
                     if (name.Length < 6)
                     {
                         File.Copy(textBox1.Text + "\\" + Savename, textBox2.Text + "\\" + Savename, true);
+                        File.Delete(textBox1.Text + "\\" + Savename);
                         continue;
                     }
                     else if (name.Length >= 6 && name.Length < 30)
                     {
                         File.Copy(textBox1.Text + "\\" + Savename, textBox3.Text + "\\" + Savename, true);
+                        File.Delete(textBox1.Text + "\\" + Savename);
                         continue;
                     }
                     else if (name.Length >= 30)
                     {
                         File.Copy(textBox1.Text + "\\" + Savename, textBox4.Text + "\\" + Savename, true);
+                        File.Delete(textBox1.Text + "\\" + Savename);
                         continue;
                     }
 

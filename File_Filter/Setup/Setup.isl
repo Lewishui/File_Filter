@@ -339,14 +339,15 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
-		<row><td>File_Filter.exe</td><td>{E9DCB5C8-AAB1-426F-828B-408C4E7EA4E0}</td><td>INSTALLDIR</td><td>2</td><td/><td>file_filter.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>File_Filter.vshost.exe</td><td>{DD3811C9-D466-4AF2-B5FB-37F69039A1AE}</td><td>INSTALLDIR</td><td>2</td><td/><td>file_filter.vshost.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>File_Filter.exe</td><td>{2C4F6A4D-C9D9-45E1-9EA3-12B3D6EDD4AA}</td><td>INSTALLDIR</td><td>2</td><td/><td>file_filter.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>File_Filter.vshost.exe</td><td>{A4BBFA0E-02B5-42BB-B929-0B1F10F910DE}</td><td>INSTALLDIR</td><td>2</td><td/><td>file_filter.vshost.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{B8F1DDB8-F187-4BB2-A82D-F043430C46A0}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{90A9E165-7766-4E19-8DF7-EF5345BB0BD6}</td><td>RESULTS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{BBA78B44-2190-490C-ACFD-8317AACFF63E}</td><td>DIRECTORY1</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT3</td><td>{D2306FC1-3722-4A7A-AD58-2D0CE4441790}</td><td>DIRECTORY2</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT4</td><td>{DE060816-13FE-417A-817D-C506C58E81FF}</td><td>DIRECTORY3</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT5</td><td>{16FC4AB1-FACD-4FD9-A103-0152FB6F70CC}</td><td>DIRECTORY4</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Office.Interop.Excel.dll</td><td>{B27290BD-AC82-40A9-A9C0-3FAB36E5D45E}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.office.interop.exc</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>NewComponent1</td><td>{98005CA6-B169-482A-8C8F-AD1FCE8175C7}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
@@ -1883,6 +1884,7 @@
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT3</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT4</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT5</td></row>
+		<row><td>AlwaysInstall</td><td>Microsoft.Office.Interop.Excel.dll</td></row>
 		<row><td>AlwaysInstall</td><td>NewComponent1</td></row>
 	</table>
 
@@ -1903,6 +1905,8 @@
 		<row><td>file_filter.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>FILE_F~1.PDB|File_Filter.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\File_Filter\File_Filter\File_Filter\bin\Debug\File_Filter.pdb</td><td>1</td><td/></row>
 		<row><td>file_filter.vshost.exe</td><td>File_Filter.vshost.exe</td><td>FILE_F~1.EXE|File_Filter.vshost.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\File_Filter\File_Filter\File_Filter\bin\Debug\File_Filter.vshost.exe</td><td>1</td><td/></row>
 		<row><td>file_filter.vshost.exe.confi</td><td>ISX_DEFAULTCOMPONENT</td><td>FILE_F~1.CON|File_Filter.vshost.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\File_Filter\File_Filter\File_Filter\bin\Debug\File_Filter.vshost.exe.config</td><td>1</td><td/></row>
+		<row><td>file_filter.vshost.exe.manif</td><td>ISX_DEFAULTCOMPONENT</td><td>FILE_F~1.MAN|File_Filter.vshost.exe.manifest</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\File_Filter\File_Filter\File_Filter\bin\Debug\File_Filter.vshost.exe.manifest</td><td>1</td><td/></row>
+		<row><td>microsoft.office.interop.exc</td><td>Microsoft.Office.Interop.Excel.dll</td><td>MICROS~1.DLL|Microsoft.Office.Interop.Excel.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\File_Filter\File_Filter\File_Filter\bin\Debug\Microsoft.Office.Interop.Excel.dll</td><td>1</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2159,14 +2163,15 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
-		<row><td>File_Filter.exe</td><td/><td/><td>_6FE9D322_048C_4406_A177_84A32DC9A5DC_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>File_Filter.vshost.exe</td><td/><td/><td>_602841F7_8185_43DC_ACF7_72CFA40F8F40_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>File_Filter.exe</td><td/><td/><td>_A562BAF1_C076_4249_BBF8_BA9AE72649AB_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>File_Filter.vshost.exe</td><td/><td/><td>_196AE2CD_26AD_4796_8E1F_96B410AB7A36_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_4BBE0ABE_781C_4CE9_A74D_684B211F501E_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_2A4FDB04_FF21_4BC0_BB24_F0125CEE524F_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT2</td><td/><td/><td>_D6C5382E_521F_4CA2_A512_24A98316E306_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT3</td><td/><td/><td>_1AE94ADA_93D7_45CB_8DA7_B1BF8DC253EC_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT4</td><td/><td/><td>_532FDDE4_AF76_46B3_A970_3D09834E3762_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT5</td><td/><td/><td>_ABDA5506_B452_4DF7_A0F4_ABAF1F449151_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Office.Interop.Excel.dll</td><td/><td/><td>_0177D779_68EA_46E0_B044_275258608F0A_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>NewComponent1</td><td/><td/><td>_58618E97_BC89_4F2B_893E_06BE3A5469C4_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
@@ -3616,6 +3621,10 @@
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>2052</td><td>File_Filter.exe</td><td>0</td><td/><td>900074415</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>1033</td><td/><td>0</td><td/><td>900096815</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>2052</td><td>LAUNCH~1.EXE|Launch File_Filter.vshost.exe</td><td>0</td><td/><td>900096815</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME5</td><td>1033</td><td/><td>0</td><td/><td>1034335181</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME5</td><td>2052</td><td>LAUNCH~1.EXE|Launch File_Filter.exe</td><td>0</td><td/><td>1034335181</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME6</td><td>1033</td><td/><td>0</td><td/><td>1034335181</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME6</td><td>2052</td><td>LAUNCH~1.EXE|Launch File_Filter.vshost.exe</td><td>0</td><td/><td>1034335181</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>2052</td><td>从以下服务器列表中选择要连接的数据库服务器。</td><td>0</td><td/><td>900110991</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_DB</td><td>2052</td><td>从以下的编录名称列表中，选择您希望将其作为目标的数据库编录。</td><td>0</td><td/><td>900110991</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_TEMPLATE</td><td>2052</td><td>[IS_SQLBROWSE_INTRO]</td><td>0</td><td/><td>900110991</td></row>
@@ -3910,6 +3919,8 @@
 		<row><td>ID_STRING3</td><td>2052</td><td>File_Filter.exe</td><td>0</td><td/><td>900102895</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>LAUNCH~1.EXE|Launch File_Filter.exe</td><td>0</td><td/><td>900129679</td></row>
 		<row><td>ID_STRING4</td><td>2052</td><td>LAUNCH~1.EXE|Launch File_Filter.exe</td><td>0</td><td/><td>900129679</td></row>
+		<row><td>ID_STRING5</td><td>1033</td><td>LAUNCH~1.EXE|Launch File_Filter.exe</td><td>0</td><td/><td>1034318829</td></row>
+		<row><td>ID_STRING5</td><td>2052</td><td>LAUNCH~1.EXE|Launch File_Filter.exe</td><td>0</td><td/><td>1034318829</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>2052</td><td>系统将不安装此功能。</td><td>0</td><td/><td>900110991</td></row>
 	</table>
 
@@ -4020,8 +4031,11 @@
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\setupicon.ico</td><td>0</td></row>
 		<row><td>File_Filter.exe1_1B5DBC8CC6334FFDAA47FC62C349156C.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>File_Filter.exe1_5427E5435DC24C5091E375C1A630265A.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
+		<row><td>File_Filter.exe1_EF71D1B1F02147AF855FCB87CE0E50AA.exe</td><td/><td>D:\Dev Project\File_Filter\File_Filter\File_Filter\bin\Debug\File_Filter.exe</td><td>0</td></row>
 		<row><td>File_Filter.exe_6705B33C7F9D4A8D8A061D0230A7E3AF.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>File_Filter.exe_97891C06886241D78F6A750348428E1A.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
+		<row><td>File_Filter.exe_F064EAD656974E179CD4DB8259A248F2.exe</td><td/><td>D:\Dev Project\File_Filter\File_Filter\File_Filter\bin\Debug\File_Filter.exe</td><td>0</td></row>
+		<row><td>File_Filter.vshost_2C83C226817E46428468C7D6C36FEB7F.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>File_Filter.vshost_33272E9960DD4BE694CAE4F6E994758E.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>File_Filter.vshost_4818E24A838E465499A2668592E40A1D.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>UNINST_Uninstall_S_95C3CA6D4EFA433FB2733C397BBA6FC8.exe</td><td/><td>C:\Program Files (x86)\InstallShield\2012SpringLE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
@@ -4694,9 +4708,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>File_Filter.exe</td><td>setup</td><td>##IDS_SHORTCUT_DISPLAY_NAME3##</td><td>File_Filter.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>File_Filter.exe_6705B33C7F9D4A8D8A061D0230A7E3AF.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>File_Filter.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME3##</td><td>File_Filter.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>File_Filter.exe1_5427E5435DC24C5091E375C1A630265A.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>File_Filter.vshost.exe</td><td>setup</td><td>##IDS_SHORTCUT_DISPLAY_NAME4##</td><td>File_Filter.vshost.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>File_Filter.vshost_4818E24A838E465499A2668592E40A1D.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>File_Filter.exe</td><td>setup</td><td>##IDS_SHORTCUT_DISPLAY_NAME5##</td><td>File_Filter.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>File_Filter.exe_F064EAD656974E179CD4DB8259A248F2.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>File_Filter.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME5##</td><td>File_Filter.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>File_Filter.exe1_EF71D1B1F02147AF855FCB87CE0E50AA.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>File_Filter.vshost.exe</td><td>setup</td><td>##IDS_SHORTCUT_DISPLAY_NAME6##</td><td>File_Filter.vshost.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>File_Filter.vshost_2C83C226817E46428468C7D6C36FEB7F.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>UNINST_Uninstall_Setup</td><td>setup</td><td>UNINST|Uninstall Setup</td><td>NewComponent1</td><td>[SystemFolder]msiexec.exe</td><td>/x {A5A4F5FE-771D-4C17-A04A-12F820B2006C}</td><td/><td/><td>UNINST_Uninstall_S_95C3CA6D4EFA433FB2733C397BBA6FC8.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
