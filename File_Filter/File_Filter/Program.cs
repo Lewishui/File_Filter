@@ -28,8 +28,8 @@ namespace File_Filter
             int timeTotal = ts.Days;
             if (timeTotal < 0)
             {
-                MessageBox.Show("测试运行期已到，请将剩余费用付清 !");
-                return;
+                //MessageBox.Show("测试运行期已到，请将剩余费用付清 !");
+                //return;
             }
             // MessageBox.Show("当前为测试系统 !");
 
